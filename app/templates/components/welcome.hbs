@@ -1,0 +1,16 @@
+<div class="welcome-container">
+  <div class="header">
+    <h2>City Map</h2>
+  </div>
+  <div class="welcome-image">
+    <img src="" alt="Welcome Image">
+  </div>
+  <div class="welcome-message">
+    <p>Hi, welcome to city map !!</p>
+  </div>
+  <div class="enter-city-container">
+    <form {{on "submit" this.submit}}>
+      <input value="" placeholder="So, where are you from ?" {{on "input" this.handleChangeInput}}>      
+    </form>
+  </div>
+</div>

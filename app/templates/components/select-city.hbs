@@ -1,0 +1,14 @@
+<div class="select-city-container">
+  <div class="select-city-input-container">
+    <h1>Where are you planning ?</h1>
+    <input value="" placeholder="type city or country" {{on "input" this.handleCityInput}}>
+  </div>
+  <div class="popular-cities-container">
+    <h1>Popular cities visited</h1>
+    <div class="cities">
+      {{#each @cities as |city|}}
+        <h5 {{on "click" (fn this.selectCity city)}}>{{city.name}}</h5>        
+      {{/each}}
+    </div>
+  </div>
+</div>
