@@ -1,0 +1,39 @@
+<div class="place-container" style={{@data.photo}}>
+    <div class="container">
+        <div class="header">
+            <h2>City Map</h2>
+        </div>
+        <div class="place-details">
+            <div class="place-name-container">
+                <h1>{{@data.city.city}} {{@data.city.country}}</h1>
+                <img src="images/location.png">
+            </div>
+            <div class="place-weather">
+                <h3>{{@data.weather.app_temp}}&deg; {{@data.weather.weather.description}}</h3>
+            </div>
+            <div class="place-curreny">
+                <div class="currency-conversion">
+                    <h4>1 {{@data.user.currency}} = {{format-currency 1 @data.currency.conversion }}
+                        {{@data.currency.format}}</h4>
+                </div>
+            </div>
+
+            <div class="place-local-news">
+                <h4>Local News</h4>
+                <div class="content-container">
+                    {{#each @data.news.value as | news |}}
+                    <div class="news-container" {{on "click" (fn this.takeToArticle news) }}>
+                        <div class="image-container">
+                            <img src={{news.image.thumbnail.contentUrl}}>
+                        </div>
+                        <div class="article-container">
+                            <h3>{{news.name}}</h3>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
