@@ -1,19 +1,22 @@
 <div class="select-city-container">
-  <div class="header">
-    <h2>City Map</h2>
+  <div class="header-container">
+    <div class="header">
+      <h2>City Map</h2>
+      <p>Welcome to City Map, mini before travel guide application built with Rapid API.</p>
+    </div>
+    <div class="header-welcome-img">
+      <img src="images/undraw_joyride_hnno.png" alt="Welcome Joy ride">
+    </div>
   </div>
-  <div class="select-city-input-container">
-    <h2>Where are you planning ?</h2>
-    <input value="" placeholder="type city or country" {{on "input" this.handleCityInput}}>
-  </div>
+  
   <div class="popular-cities-container">
     <h2>Popular cities visited</h2>
     <div class="cities">
       {{#each @cities as |city|}}
-      <div class="city-container" {{on "click" (fn this.selectCity city)}}>
-        <img src={{city.img}} alt={{city.name}}>
-        <h5>{{city.name}}</h5>
-      </div>
+        <div class="city-container" {{on "click" (fn this.selectCity city)}}>
+          <img src={{city.img}} alt={{city.name}}>
+          <h5>{{city.name}}</h5>
+        </div>
       {{/each}}
     </div>
   </div>

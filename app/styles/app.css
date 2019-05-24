@@ -5,70 +5,47 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    
-}
-
-.welcome-container {
-    height: 100vh;
-    background: linear-gradient(180deg, #83A4D4 0%, #B6FBFF 100%);
-    text-align: center;
-}
-
-.welcome-container .header h2 {
-    margin: 0;
-    font-family: 'Modak', cursive;
-    font-size: 72px;
-    color: white;
-    font-weight: 300;
-    padding-top: 40px;
-}
-
-.welcome-container .welcome-image img {
-    width: 350px;
-    height: 250px;
-    margin-top: 30px;
-}
-
-.welcome-container .welcome-message p {
-    font-family: 'Modak', cursive;
-    color: white;
-    font-size: 32px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-}
-
-.welcome-container .enter-city-container input {
-    width: 300px;
-    height: 35px;
-    font-size: 14px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    margin-top: 40px;     
-    border: none;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-}
-
-.welcome-container .enter-city-container input::placeholder {
-    color: #6398CF;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;    
 }
 
 .select-city-container {
-    height: 100%;
     background: linear-gradient(180deg, #83A4D4 0%, #B6FBFF 100%);
+    height: 100%;    
 }
 
-.select-city-container .header h2 {
-    text-align: center;
+.select-city-container .header-container {
+    display: grid;
+    grid-template-columns: 600px 400px;
+}
+
+.select-city-container .header-container .header h2 {
+    text-align: left;
     margin: 0;
     font-family: 'Modak', cursive;
     font-size: 72px;
     color: white;
     font-weight: 300;
     padding-top: 40px;
+    margin-left: 80px;
+}
+
+.select-city-container .header-container .header p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 25px;
+    margin-left: 80px;
+    letter-spacing: 0.5px;    
+    font-weight: 300;
+}
+
+.select-city-container .header-container .header-welcome-img {
+    padding-top: 50px;
+}
+
+.select-city-container .header-container .header-welcome-img img {
+    width: 450px;
+    height: 300px;
 }
 
 .select-city-container .select-city-input-container {
@@ -80,33 +57,17 @@ body {
     margin: 0;
     font-family: 'Modak', cursive;
     font-size: 36px;
-    color: white;
+    color: white;    
     font-weight: 300;
     padding-top: 20px;
     padding-bottom: 20px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
-.select-city-container .select-city-input-container input {
-    width: 300px;
-    height: 35px;
-    font-size: 14px;
-    padding: 10px 20px;
-    border-radius: 50px;    
-    border: none;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);   
-}
-
-.select-city-container .select-city-input-container input::placeholder {
-    color: #6398CF;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
 .select-city-container .popular-cities-container {
     width: 90%;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .select-city-container .popular-cities-container h2 {
@@ -142,6 +103,7 @@ body {
 .select-city-container .popular-cities-container .cities .city-container h5 {
     font-size: 16px;    
     letter-spacing: .5px;    
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .place-container {
@@ -154,6 +116,10 @@ body {
 .place-container .container {
     width: 90%;
     margin: 0 auto;
+}
+
+.place-container .header a {
+    text-decoration: none;
 }
 
 .place-container .header h2 {
@@ -177,26 +143,26 @@ body {
 
 .place-container .place-details .place-weather h3 {
     color: white;
-    font-size: 24px;
+    font-size: 42px;
     font-weight: 300;
-    letter-spacing: 2px;
-    margin: 0;
-    margin-top: 30px;
+    letter-spacing: 2px;    
+    margin: 30px 0;
+    margin-top: 50px        
+}
+
+.place-container .place-details .place-weather h3 .description {
+    font-size: 24px;
 }
 
 .place-container .place-details .place-local-news h4 {
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 300;
-    letter-spacing: 1px;
-    margin: 0;
+    letter-spacing: 1.5px;
+    margin: 30px 0; 
+    margin-top: 50px;   
 }
 
-
-.place-container .place-local-news h4 {
-    color: white;
-    margin: 10px;
-}
 
 .place-container .place-local-news .content-container {
     display: flex;
@@ -206,30 +172,29 @@ body {
 }
 
 .place-container .place-local-news .content-container .news-container {    
-    width: 30%;
-    display: flex;
-    flex-direction: row;
+    width: 30%;    
     height: 150px;    
-    background: #000000;
-    box-shadow: 0px 0px 10px #2F2E41;
+    background: #000000;    
     margin-right: 35px;
     margin-bottom: 35px;
     border-radius: 5px;
     transition: transform .3s ease;
     cursor: pointer;
+    box-shadow: 0 0.938em 2.188em rgba(50,50,93,.15), 0 0.313em 0.938em rgba(0,0,0,.1);
+    border-radius: 10px;
+    display: grid;    
+    grid-template-columns: 150px 220px;
 }
 
 .place-container .place-local-news .content-container .news-container:hover {
     transform: scale(1.1);
 }
 
-.place-container .place-local-news .content-container  .news-container .image-container {
-    width: 40%
-}
-
 .place-container .place-local-news .content-container  .news-container .image-container img {
     width: 150px;
     height: 150px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .place-container .place-local-news .content-container  .news-container .article-container {
@@ -240,7 +205,7 @@ body {
 .place-container .place-local-news .content-container  .news-container .article-container h3  {
     color: white;
     margin: 0;
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 14px;
     letter-spacing: 1px;
 }

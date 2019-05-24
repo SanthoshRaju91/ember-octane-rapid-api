@@ -8,7 +8,6 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('select');
-  this.route('welcome');
   this.route('place');
 });
 
